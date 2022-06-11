@@ -1,7 +1,6 @@
 """
 Database models.
 """
-from multiprocessing.sharedctypes import Value
 from django.db import models
 from django.contrib.auth.models import (
     AbstractBaseUser,
