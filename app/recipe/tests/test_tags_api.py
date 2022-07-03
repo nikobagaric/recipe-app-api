@@ -20,6 +20,7 @@ def detail_url(tag_id):
     """Create and return a tag detail url."""
     return reverse('recipe:tag-detail', args=[tag_id])
 
+
 def create_user(email='user@example.com', password='testpass123'):
     """Create and return a user."""
     return get_user_model().objects.create_user(email=email, password=password)
@@ -92,4 +93,4 @@ class PrivateTagsApiTests(TestCase):
 
         self.assertEqual(res.status_code, status.HTTP_204_NO_CONTENT)
         tags = Tag.objects.filter(user=self.user)
-        self.assertFalse(tag.exists())
+        self.assertFalse(tags.exists())
