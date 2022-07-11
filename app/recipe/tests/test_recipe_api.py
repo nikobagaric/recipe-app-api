@@ -2,7 +2,6 @@
 Test for recipe APIs.
 """
 from decimal import Decimal
-from venv import create
 
 from django.contrib.auth import get_user_model
 from django.test import TestCase
